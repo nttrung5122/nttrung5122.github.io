@@ -151,21 +151,7 @@ function purchaseClicked() {
 
 }
 var receiptIdNext = 103;
-var arrReceipt = [{
-    receiptId: 101,
-    listItem: [
-        { id: 4, sl: "1", date: "December\n01,2021" }, { id: 24, sl: "3", date: "December\n01,2021" }
-    ],
-    userId: 101,
-    status: 1
-}, {
-    receiptId: 102,
-    listItem: [
-        { id: 6, sl: "1", date: "December\n02,2021" }, { id: 31, sl: "3", date: "December\n01,2021" }
-    ],
-    userId: 101,
-    status: 0
-}];
+var arrReceipt = [];
 
 
 function createReceipt() {
