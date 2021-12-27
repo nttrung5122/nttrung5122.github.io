@@ -58,7 +58,7 @@
     background-color: black;
     height: 1.5px;
     width: 6%;
-    margin-top: -1.2%;
+    margin-top: -0.5%;
 }
 
 div.feature-post .span-1-of-2 {
@@ -197,6 +197,7 @@ div.blog-infomation div {
     transition: all .3s;
     padding: 10px;
     box-shadow: 5px 10px 5px 1px #888888;
+    /* box-shadow: 5px 10px 5px 1px rgba(134, 134, 134, 0.671); */
     animation: animate 0.75s 1;
     animation-direction: normal;
     z-index: 99;

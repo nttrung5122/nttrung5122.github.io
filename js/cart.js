@@ -112,6 +112,7 @@ const dateoutput = month + '\n' + day + ',' + year;
 
 function purchaseClicked() {
     alert('Cảm ơn bạn vì đã ủng hộ !')
+    window.location.href= 'index.html';
     var cartItems = document.getElementsByClassName('cart-items')[0];
     var cartItemContainer = document.getElementsByClassName('cart-items')[0];
     var cartRows = cartItemContainer.getElementsByClassName('cart-row');
