@@ -2,7 +2,9 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url(../img/rm147-mynt-33_1.jpg);
 }
+
 
 html {
   font-family: "Lato", sans-serif;
@@ -14,10 +16,11 @@ html {
   padding: 0;
 }
 
-.logo {
-  width: 70px;
+.logo2 {
+  width: 50px;
   height: auto;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 a,
@@ -35,6 +38,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 10%;
+  background-color: #cc4c4c;
+  height: 70px;
+  margin-bottom: 50px;
 }
 
 .nav_links {
@@ -190,7 +196,7 @@ section {
   height: 100%;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 5%;
+  padding-top: 10%;
 }
 
 .Window {

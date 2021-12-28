@@ -62,16 +62,31 @@ function checkForm() {
         return false;
 
     } else {
+        var tmp1=JSON.parse(localStorage.getItem('txtusername'));
+        for(let i=0;i<tmp1.length;i++){
+            if(tmp1[i].username==username){
+                alert("Tên đăng nhập đã tồn tại!!");
+                document.getElementById("txtusername").select();
+                document.getElementById("txtusername").focus();                
+                return false;
+            }
+        }
         document.getElementById("checkuser").innerHTML = "";
     }
 
     if (password == "") {
-        document.getElementById("checkpass").innerHTML = " *Mật khẩu rỗng";
+        document.getElementById("checkpass").innerHTML = " *Mật khẩu không được rỗng";
         document.getElementById("txtpassword").focus();
         return false;
     }
+    if(document.getElementById("diachi").value=="")
+    {
+        alert("Địa chỉ không được để trống!!")
+        document.getElementById("diachi").focus();
+        return false;
+    }
     if (document.getElementById("txtpassword").value.length < 8) {
-        document.getElementById("checkpass").innerHTML = " Mật khẩu phải lớn hơn 8 ký tự";
+        document.getElementById("checkpass").innerHTML = " *Mật khẩu phải lớn hơn 8 ký tự";
         return false;
     } else {
         document.getElementById("checkpass").innerHTML = "";

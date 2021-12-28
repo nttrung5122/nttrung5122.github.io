@@ -2,6 +2,7 @@
 
 var userCurent;
 var cartUser;
+var data=[];
 window.onload = function() {
     userCurent = JSON.parse(localStorage.getItem('userCurent'));
     // alert(userCurent);
@@ -16,7 +17,6 @@ window.onload = function() {
     }
 
 }
-var data;
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready);
 } else {
@@ -119,8 +119,12 @@ function purchaseClicked() {
     var arrpurchaseItem = [];
 
     // chạy vòng lập duyệt các giá trị của món hàng
-
-    var data = JSON.parse(localStorage.getItem(cartUser));
+    if(localStorage.getItem(cartUser)==null){
+        data=[];
+    }
+    else{
+        data = JSON.parse(localStorage.getItem(cartUser));
+    }
     for (var i = 0; i < cartRows.length; i++) {
         for (i = 0; i < data.length; i++) {
             var purPrice = data[i].producePrice;
@@ -180,7 +184,7 @@ function removeCartItem(event) {
     console.log(buttonClicked.getAttribute("name"));
     buttonClicked.parentElement.parentElement.remove();
     for (let i = 0; i < data.length; i++) {
-        if (data[i].produceId === buttonClicked.getAttribute("name")) {
+        if (data[i].produceId === Number(buttonClicked.getAttribute("name"))) {
             data.splice(i, 1);
             break;
         }

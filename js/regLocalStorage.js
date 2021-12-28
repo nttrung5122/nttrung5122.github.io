@@ -6,19 +6,8 @@ function createAdmin() {
     if (localStorage.getItem('txtusername') == null) {
         // alert("Local trống!!!\nMời kiểm tra console.log");
         console.log("Tạo mới 1 admin và 1 user");
-
-        var user1 = {
-            userID: 100,
-            username: 'admin',
-            password: 'admin',
-            fullname: 'Admin',
-            address: 'admin address',
-            tellnumber: '123',
-            datesignup: '02-01-2002',
-            usertype: 'admin'
-        };
         var user2 = {
-            userID: 101,
+            userID: 102,
             username: 'thanhtrung01',
             password: '05102002',
             fullname: 'Thành Trung',
@@ -28,13 +17,12 @@ function createAdmin() {
             usertype: 'kh'
         }
 
-        userArray.push(user1);
         userArray.push(user2);
 
         console.log(userArray);
 
         localStorage.setItem('txtusername', JSON.stringify(userArray));
-        var userIDMark = 102;
+        var userIDMark = 103;
         localStorage.setItem('IDMark', JSON.stringify(userIDMark));
     }
 }
@@ -67,7 +55,13 @@ function createnewuser() {
         console.log(typeof(newuser));
 
         userArray.push(newuser);
-
+        // var tmp=document.getElementById("txtusername").value;
+        // for(let i=0;i<userArray.length;i++){
+        //     if(userArray[i].username==tmp){
+        //         alert("Tên đăng nhập đã tồn tại");
+                
+        //     }
+        // }
         alert("Tạo mới thành công!");
         //day vao local storage
         localStorage.setItem('txtusername', JSON.stringify(userArray));
@@ -100,17 +94,23 @@ function login() {
     var userArray = JSON.parse(localStorage.getItem('txtusername'));
     for (i = 0; i < userArray.length; i++)
         if (userArray[i].username == username && userArray[i].password == password) {
-            if (userArray[i].usertype == "admin") {
-                logStatus = 0;
-                //window.location = "manageAccount.html";
-            } else {
+            // if (userArray[i].usertype == "admin") {
+            //     logStatus = 0;
+            //     //window.location = "manageAccount.html";
+            // } else {
                 logStatus = i;
                 userCurent = userArray[i].userID;
                 //window.location = "user.html";
-            }
+            // }
         }
     localStorage.setItem('status', JSON.stringify(logStatus));
     localStorage.setItem('userCurent', JSON.stringify(userCurent));
+    if(logStatus==-1){
+        alert("Tài khoản hoặc mật khẩu không đúng!!");
+    }
+    else{
+        alert("Đăng nhập thành công");
+    }
     changeLogstatus();
     username = '';
     password = '';
@@ -133,17 +133,18 @@ function changeLogstatus() {
     var status = localStorage.getItem('status');
     // alert(status);
 
-    if (status == 0) {
-        document.getElementById("topright").innerHTML =
-            '<a href="admin/admin.html">Admin</a>' +
-            '<a href="index.html" onclick="logOut();"><i class="fas fa-sign-out-alt"></i></a>';
+    // if (status == 0) {
+    //     document.getElementById("topright").innerHTML =
+    //         '<a href="admin/admin.html">Admin</a>' +
+    //         '<a href="index.html" onclick="logOut();"><i class="fas fa-sign-out-alt"></i></a>';
 
-        document.getElementById("barright").innerHTML =
-            '<a href="admin/admin.html" onclick="document.getElementById(' + "'sidebarwrapper'" + ').style.display=' + "'none'" + ';">' +
-            '<li>Admin</li>' +
-            '</a>' +
-            '<a href="index.html" onclick="logOut();"><li>Sign out</li></a>';
-    } else if (status == -1) {
+    //     document.getElementById("barright").innerHTML =
+    //         '<a href="admin/admin.html" onclick="document.getElementById(' + "'sidebarwrapper'" + ').style.display=' + "'none'" + ';">' +
+    //         '<li>Admin</li>' +
+    //         '</a>' +
+    //         '<a href="index.html" onclick="logOut();"><li>Sign out</li></a>';
+    // } else 
+    if (status == -1) {
         document.getElementById("topright").innerHTML =
             '<a href="#" onclick="showLog(); createAdmin();">Login</a>';
 

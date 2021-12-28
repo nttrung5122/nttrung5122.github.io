@@ -124,106 +124,64 @@ function home() {
         '</div>' +
         '</div>' +
         '<a href="#" style="float: right; margin-top: 3%; margin-bottom: 3%;"' +
-        'onclick="changeMenu(document.getElementById(' + "'contact'" + '));' +
+        'onclick="changeMenu(document.getElementById(' + "'clickblog'" + '));' +
         '">View all ... </a>' +
 
-        "<div id='titlecontact'>Let's Contact</div>" +
-        '<div id="boxcontact">' +
+        // "<div id='titlecontact'>Let's Contact</div>" +
+        // '<div id="boxcontact">' +
         '</div>';
     return s;
 }
 
 function contact() {
     var s;
-    s = '<h4 class="contact-place-tile">our offices</h4>' +
-        '<div class="contact-place">' +
-        '<div class="contact-place-infomation" id="contact-place-infomation-wrapper">' +
-        '<div id="contact-place-infomation-1">' +
-        '<i class="fas fa-window-close" onclick="closePlaceInfomation()"></i>' +
-        '<img src="./img/img1.jpg" alt="place 1"> <br>' +
-        '<p>Thành phố Hồ Chí Minh</p>' +
-        '<span>' +
-        '105 Bà Huyện Thanh Quan <br>Võ Thị Sáu <br>Quận 3' +
-        '</span>' +
-        '<p>opening times</p>' +
-        '<span>' +
-        'Mon - Fri 08:00 to 22:00 <br>' +
-        'Sat - 09:00 to 20:00 <br>' +
-        'Sun - 12:00 to 18:00' +
-        '</span>' +
-        '</div>' +
-        '<div id="contact-place-infomation-2">' +
-        '<i class="fas fa-window-close" onclick="closePlaceInfomation()"></i>' +
-        '<img src="./img/img2.jpg" alt="place 2" id="place-2"> <br>' +
-        '<p>Thành phố Hồ Chí Minh</p>' +
-        '<span>' +
-        '273 An D. Vương <br>Phường 3 <br>Quận 5' +
-        '</span>' +
-        '<p>opening times</p>' +
-        '<span>' +
-        'Mon - Wed 09:00 to 21:00 <br>' +
-        'Thu - Sat 09:00 to 22:00 <br>' +
-        'Sun - 10:00 to 19:00 <br>' +
-        '</span>' +
-        '</div>' +
-        '<div id="contact-place-infomation-3">' +
-        '<i class="fas fa-window-close" onclick="closePlaceInfomation()"></i>' +
-        '<img src="./img/img3.jpg" alt="place 3"> <br>' +
-        '<p>Thành phố Hồ Chí Minh</p>' +
-        '<span>' +
-        '4 Đ. Tôn Đức Thắng <br>Bến Nghé <br>Quận 1' +
-        '</span>' +
-        '<p>opening times</p>' +
-        '<span>' +
-        'Mon - Tue 07:00 to 21:00 <br>' +
-        'Wed - Sat 09:00 to 22:00 <br>' +
-        'Sun - 10:00 to 20:00 <br>' +
-        '</span>' +
-        '</div>' +
-        '<div id="contact-place-infomation-4">' +
-        '<i class="fas fa-window-close" onclick="closePlaceInfomation()"></i>' +
-        '<img src="./img/img4.jpg" alt="place 4"> <br>' +
-        '<p>Thành phố Hồ Chí Minh</p>' +
-        '<span>' +
-        '20 Ngô Thời Nhiệm <br>Võ Thị Sáu <br>Quận 3' +
-        '</span>' +
-        '<p>opening times</p>' +
-        '<span>' +
-        'Mon - Thu 08:00 to 22:00 <br>' +
-        'Fri - Sat 09:00 to 20:00 <br>' +
-        'Sun - 12:00 to 18:00' +
-        '</span>' +
-        '</div>' +
-        '</div>' +
-        '<div class="span-1-of-2">' +
-        '<img src="./img/img1.jpg" alt="place 1" id="place-1" onclick="showPlaceInfomation(this)"> <br>' +
-        '<p>Thành phố Hồ Chí Minh</p>' +
-        '<span>' +
-        '105 Bà Huyện Thanh Quan <br>Võ Thị Sáu <br>Quận 3' +
-        '</span>' +
-        '</div>' +
-        '<div class="span-1-of-2">' +
-        '<img src="./img/img2.jpg" alt="place 2" id="place-2" onclick="showPlaceInfomation(this)"> <br>' +
-        '<p>Thành phố Hồ Chí Minh</p>' +
-        '<span>' +
-        '273 An D. Vương <br>Phường 3 <br>Quận 5' +
-        '</span>' +
-        '</div>' +
-        '<div class="span-1-of-2">' +
-        '<img src="./img/img3.jpg" alt="place 3" id="place-3" onclick="showPlaceInfomation(this)"> <br>' +
-        '<p>Thành phố Hồ Chí Minh</p>' +
-        '<span>' +
-        '4 Đ. Tôn Đức Thắng <br>Bến Nghé <br>Quận 1' +
-        '</span>' +
-        '</div>' +
-        '<div class="span-1-of-2">' +
-        '<img src="./img/img4.jpg" alt="place 4" id="place-4" onclick="showPlaceInfomation(this)"> <br>' +
-        '<p>Thành phố Hồ Chí Minh</p>' +
-        '<span>' +
-        '20 Ngô Thời Nhiệm <br>Võ Thị Sáu <br>Quận 3' +
-        '</span>' +
-        '</div>' +
-        '</div>' +
+    s = '<h4 class="contact-place-tile">our offical</h4>' +
+    '<div class="contact-place" style="height: 450px" >' +
+    '<div class="contact-place-infomation" id="contact-place-infomation-wrapper">' +
+    '<div id="contact-place-infomation-1">' +
+    '<i class="fas fa-window-close" onclick="closePlaceInfomation()"></i>' +
+    '<img src="./img/img1.jpg" alt="place 1"> <br>' +
+    '<p>Trụ sở chính</p>' +
+    '<span>' +
+    '105 Bà Huyện Thanh Quan <br>Võ Thị Sáu <br>Quận 3' +
+    '</span>' +
+    '<p>working times</p>' +
+    '<span>' +
+    'Mon - Fri 08:00 to 22:00 <br>' +
+    'Sat - 09:00 to 20:00 <br>' +
+    'Sun - 12:00 to 18:00' +
+    '</span>' +
+    '</div>' +
+    '<div id="contact-place-infomation-2">' +
+    '<i class="fas fa-window-close" onclick="closePlaceInfomation()"></i>' +
+    '<img src="./img/img2.jpg" alt="place 2" id="place-2"> <br>' +
+    '<p>Chi nhánh 1</p>' +
+    '<span>' +
+    '273 An D. Vương <br>Phường 3 <br>Quận 5' +
+    '</span>' +
+    '<p>working times</p>' +
+    '<span>' +
+    'Mon - Wed 09:00 to 21:00 <br>' +
+    'Thu - Sat 09:00 to 22:00 <br>' +
+    'Sun - 10:00 to 19:00 <br>' +
+    '</span>' +
+    '</div>' +
+    '</div>' +
+    '<div class="span-1-of-2">' +
+    '<img src="./img/img1.jpg" alt="place 1" id="place-1" onclick="showPlaceInfomation(this)"> <br>' +
+    '<p>Trụ sở chính</p>' +  
+    '<span>' +
+    '105 Bà Huyện Thanh Quan <br>Võ Thị Sáu <br>Quận 3' +
+    '</span>' +
+    '</div>' +
+    '<div class="span-1-of-2">' +
+    '<img src="./img/img2.jpg" alt="place 2" id="place-2" onclick="showPlaceInfomation(this)"> <br>' +
+    '<p>Chi nhánh 1</p>' +
+    '<span>' +
+    '273 An D. Vương <br>Phường 3 <br>Quận 5' +
+    '</span>' +
+    '</div>' +
+    '</div>' +
         '<h2 class="contact-tile">CONNECT WITH US</h2>' +
         '<!-- -----------------------contact form---------------------- -->' +
         '<div class="contact-form" style="overflow: hidden;">' +
@@ -359,6 +317,95 @@ function product() {
 
 function blog() {
     var s =
+    '<h4 class="contact-place-tile">our store</h4>' +
+        '<div class="contact-place">' +
+        '<div class="contact-place-infomation" id="contact-place-infomation-wrapper">' +
+        '<div id="contact-place-infomation-1">' +
+        '<i class="fas fa-window-close" onclick="closePlaceInfomation()"></i>' +
+        '<img src="./img/img1.jpg" alt="place 1"> <br>' +
+        '<p>Thành phố Hồ Chí Minh</p>' +
+        '<span>' +
+        '105 Bà Huyện Thanh Quan <br>Võ Thị Sáu <br>Quận 3' +
+        '</span>' +
+        '<p>opening times</p>' +
+        '<span>' +
+        'Mon - Fri 08:00 to 22:00 <br>' +
+        'Sat - 09:00 to 20:00 <br>' +
+        'Sun - 12:00 to 18:00' +
+        '</span>' +
+        '</div>' +
+        '<div id="contact-place-infomation-2">' +
+        '<i class="fas fa-window-close" onclick="closePlaceInfomation()"></i>' +
+        '<img src="./img/img2.jpg" alt="place 2" id="place-2"> <br>' +
+        '<p>Thành phố Hồ Chí Minh</p>' +
+        '<span>' +
+        '273 An D. Vương <br>Phường 3 <br>Quận 5' +
+        '</span>' +
+        '<p>opening times</p>' +
+        '<span>' +
+        'Mon - Wed 09:00 to 21:00 <br>' +
+        'Thu - Sat 09:00 to 22:00 <br>' +
+        'Sun - 10:00 to 19:00 <br>' +
+        '</span>' +
+        '</div>' +
+        '<div id="contact-place-infomation-3">' +
+        '<i class="fas fa-window-close" onclick="closePlaceInfomation()"></i>' +
+        '<img src="./img/img3.jpg" alt="place 3"> <br>' +
+        '<p>Thành phố Hồ Chí Minh</p>' +
+        '<span>' +
+        '4 Đ. Tôn Đức Thắng <br>Bến Nghé <br>Quận 1' +
+        '</span>' +
+        '<p>opening times</p>' +
+        '<span>' +
+        'Mon - Tue 07:00 to 21:00 <br>' +
+        'Wed - Sat 09:00 to 22:00 <br>' +
+        'Sun - 10:00 to 20:00 <br>' +
+        '</span>' +
+        '</div>' +
+        '<div id="contact-place-infomation-4">' +
+        '<i class="fas fa-window-close" onclick="closePlaceInfomation()"></i>' +
+        '<img src="./img/img4.jpg" alt="place 4"> <br>' +
+        '<p>Thành phố Hồ Chí Minh</p>' +
+        '<span>' +
+        '20 Ngô Thời Nhiệm <br>Võ Thị Sáu <br>Quận 3' +
+        '</span>' +
+        '<p>opening times</p>' +
+        '<span>' +
+        'Mon - Thu 08:00 to 22:00 <br>' +
+        'Fri - Sat 09:00 to 20:00 <br>' +
+        'Sun - 12:00 to 18:00' +
+        '</span>' +
+        '</div>' +
+        '</div>' +
+        '<div class="span-1-of-2">' +
+        '<img src="./img/img1.jpg" alt="place 1" id="place-1" onclick="showPlaceInfomation(this)"> <br>' +
+        '<p>Thành phố Hồ Chí Minh</p>' +
+        '<span>' +
+        '105 Bà Huyện Thanh Quan <br>Võ Thị Sáu <br>Quận 3' +
+        '</span>' +
+        '</div>' +
+        '<div class="span-1-of-2">' +
+        '<img src="./img/img2.jpg" alt="place 2" id="place-2" onclick="showPlaceInfomation(this)"> <br>' +
+        '<p>Thành phố Hồ Chí Minh</p>' +
+        '<span>' +
+        '273 An D. Vương <br>Phường 3 <br>Quận 5' +
+        '</span>' +
+        '</div>' +
+        '<div class="span-1-of-2">' +
+        '<img src="./img/img3.jpg" alt="place 3" id="place-3" onclick="showPlaceInfomation(this)"> <br>' +
+        '<p>Thành phố Hồ Chí Minh</p>' +
+        '<span>' +
+        '4 Đ. Tôn Đức Thắng <br>Bến Nghé <br>Quận 1' +
+        '</span>' +
+        '</div>' +
+        '<div class="span-1-of-2">' +
+        '<img src="./img/img4.jpg" alt="place 4" id="place-4" onclick="showPlaceInfomation(this)"> <br>' +
+        '<p>Thành phố Hồ Chí Minh</p>' +
+        '<span>' +
+        '20 Ngô Thời Nhiệm <br>Võ Thị Sáu <br>Quận 3' +
+        '</span>' +
+        '</div>' +
+        '</div>' +
         '<div class="blog-infomation" id="blog-infomation-wrapper">' +
         '    <div id="blog-infomation-1">' +
         '        <i class="fas fa-window-close" onclick="closeBlogInfomation()"></i>' +

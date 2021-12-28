@@ -36,10 +36,11 @@ function themVaoGioHangTheoMaSP(obj) {
         alert("Vui lòng đăng nhập để mua hàng");
         showLog();
         return;
-    } else if (JSON.parse(localStorage.getItem('status')) === 0) {
-        alert("Bạn đang sử dụng tài khoản admin");
-        return;
-    }
+    } 
+    // else if (JSON.parse(localStorage.getItem('status')) === 0) {
+    //     alert("Bạn đang sử dụng tài khoản admin");
+    //     return;
+    // }
     userCurent = JSON.parse(localStorage.getItem('userCurent'));
     cartUser = 'cart' + userCurent;
     if(localStorage.getItem(cartUser)!= null)
@@ -102,10 +103,11 @@ function themvaogiohang(obj) {
         alert("Vui lòng đăng nhập để mua hàng");
         showLog();
         return;
-    } else if (JSON.parse(localStorage.getItem('status')) === 0) {
-        alert("Bạn đang sử dụng tài khoản admin");
-        return;
-    }
+    } 
+    // else if (JSON.parse(localStorage.getItem('status')) === 0) {
+    //     alert("Bạn đang sử dụng tài khoản admin");
+    //     return;
+    // }
     userCurent = JSON.parse(localStorage.getItem('userCurent'));
     cartUser = 'cart' + userCurent;
     if(localStorage.getItem(cartUser)!= null)
@@ -188,6 +190,7 @@ function searchForPrice(){
     if(max==""){
         max=99999999;
     }
+    document.getElementById('searchProduct').value="";
     console.log(min);
     console.log(max);
     for(let i=0;i<arrTmp.length;i++){
@@ -196,6 +199,7 @@ function searchForPrice(){
             i=i-1;
         }
     }
+
     let Page = Math.ceil(arrTmp.length / cntInPage);
     var s = '<ul>';
     if (Page > 1) {
@@ -499,7 +503,7 @@ function menuTop() {
     document.getElementsByClassName("menuSP")[0].innerHTML = s;
 }
 // var cntOfPage=1;
-const cntInPage = 6;
+const cntInPage = 8;
 
 function xuatSanPham(obj) {
     var tmp = '<div class="card" ><div class="img_box"><img src="' + obj.produceImg + '" alt=""><ul class="action" ><li><i onclick="thongtin(this)" name="' + obj.produceId + '" class="fa fa-eye" aria-hidden="true"></i></li><li><i onclick="themVaoGioHangTheoMaSP(this)" name="' + obj.produceId + '" class="fa fa-shopping-cart" aria-hidden="true"></i></li><li><i  onclick="" name="' + obj.produceId + '" class="fa fa-heart-o" aria-hidden="true"></i></li></ul></div><div class="content"><div class="product_name"><h3>' + obj.produceName + '</h3></div><div class="product_price_rating"><div>' + obj.producePrice + ' đ</div><div class="rating">';
@@ -523,6 +527,7 @@ var conditionTypeArr=[
 function changeCondition(type){
     document.getElementById("priceMin").value="";
     document.getElementById("priceMax").value="";
+    document.getElementById('searchProduct').value="";  
     mainProduce=JSON.parse(localStorage.getItem('myStorage'));
     if(type=='all'){
         for(let i=0;i<conditionTypeArr.length;i++){

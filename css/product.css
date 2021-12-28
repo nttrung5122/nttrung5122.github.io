@@ -24,9 +24,9 @@
     align-content: center;
     min-height: 100vh;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     margin-top: 50px;
     /* padding: 0 50px; */
     /* background-image: url(../img/background-giang-sinh-tinh-te-an-tuong.jpg) ;
@@ -66,7 +66,7 @@
     /* padding-top: 60px;
     padding-left: 5%;
     padding-right: 5%; */
-    padding: 50px 10%;
+    padding: 50px 10% 0 10%;
     margin-bottom: 20px;
     width: 100%;
     display: flex;
@@ -95,13 +95,13 @@
     margin-bottom: 6%;
     */
     margin-bottom: 6%;
-    overflow: hidden;
+    /* overflow: hidden; */
     box-shadow: 11px 7px 15px 0px #49ce71;
     border-radius: 16px;
-    width: 25.3%;
+    width: 20%;
     height: fit-content;
-    margin-left: 4%;
-    margin-right: 4%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
     float: left;
     transition: transform 0.2s;
     /* background-color: rgb(76, 16, 218); */
@@ -175,7 +175,12 @@
 .product_name h3 {
     padding: 1px 1px 11px 13px;
     margin-left: 1%;
+    width: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
+
 
 .product_price_rating {
     width: 100%;
